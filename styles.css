@@ -1,0 +1,84 @@
+/* ---------- Global styles ---------- */
+
+body {
+    background-color: #9cc3d5;
+    color: #30362e;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+/* ---------- Typography ---------- */
+
+body {
+    font-family: 'Blinker', sans-serif;
+    font-family: 'Henny Penny', cursive;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Red Hat Mono', monospace;
+}
+
+h1 {
+    color: #d1e9ee;
+}
+
+/* ---------- Header ---------- */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+    height: 100vh;
+    background-image: url("./images/activities/plitvice_walk.jpg");
+    background-size: cover;
+}
+
+.title-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------- Component.rooms ---------- */
+
+.rooms-carousel {
+    display: flex;
+}
+
+.room-carousel_img {
+    width: 80px;
+    object-fit: cover;
+}
+
+/* ---------- Component.story ---------- */
+
+.story {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+
+.story_img {
+    width: 300px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+/* ---------- Component.activites ---------- */
+
+.activities {
+    display: flex;
+    justify-content: space-around;
+}
+
+.activities-map_img {
+    width: 200px;
+}
+/* ---------- Footer ---------- */
