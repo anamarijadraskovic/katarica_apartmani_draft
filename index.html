@@ -4,35 +4,37 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Ana-Marija Drašković">
+        <!-- Google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;400&family=Henny+Penny&family=Inter:wght@400;600;700&family=Josefin+Sans:wght@200;300;500&family=Poppins:wght@300;500&family=Red+Hat+Mono:wght@300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+            rel="stylesheet">
         <title>Katarica</title>
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body>
+    <body class="flex container">
 
         <!-- HEADER & HERO -->
         <div class="hero">
-            <header class="header">
-                <div class="header-logo">
-                    <h2>Katarica apartmani</h2>
+            <header class="header flex">
+                <div class="header-logo text-accent">
+                    <h2>Katarica</h2>
                 </div>
-                <div>
-                    <a>Home</a>
-                    <a>Rooms</a>
-                    <a>Contact</a>
+                <div class="uppercase">
+                    <a href="#">Home</a>
+                    <a href="#">Rooms</a>
+                    <a href="#">Contact</a>
                 </div>
             </header>
-            <div class="title-container">
-                <h1 class="hero-title">Katarica apartmani</h1>
+            <div class="title-container flex">
+                <h1 class="hero-title fs-700">Katarica apartmani</h1>
             </div>
         </div>
 
         <!-- ROOMS -->
         <section class="rooms">
             <h2>Room colection</h2>
-            <div class="rooms-carousel">
+            <div class="rooms- flex">
                 <div class="room-carousel">
                     <img 
                         src="./images/room_1/room_bed-1.jpg"
@@ -62,7 +64,7 @@
         </section>
 
         <!-- OUR STORY -->
-        <section class="story">
+        <section class="story flex">
             <img 
                 src="images/milan_zeljka.jpg"
                 class="story_img"
@@ -79,7 +81,7 @@
         </section>
 
         <!-- ACTIVITIES -->
-        <section class="activities">
+        <section class="activities flex">
             <div class="activities-text">
                 <h1>Where to go?</h1>
                 <h4>Hiking, biking...</h4>
@@ -96,7 +98,7 @@
         </section>
 
          <!-- FOOTER-->
-         <footer>
+         <footer class="">
             <h1>Contact us</h1>
          </footer>
     </body>
