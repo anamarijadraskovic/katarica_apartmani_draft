@@ -41,7 +41,8 @@ h1,
 h2,
 h3,
 h4,
-p {
+p,
+a {
     margin: 0;
 }
 
@@ -65,7 +66,8 @@ img {
 input,
 button,
 textarea,
-select {
+select,
+a {
     font: inherit;
 }
 
@@ -158,19 +160,26 @@ a {
     line-height: 1.1;
 }
 
-/* ---------- Global styles ---------- */
 
-body {
-    flex-direction: column;
-}
-
-/* ---------- Typography ---------- */
-
+/* ------------------- */
+/* Components   */
+/* ------------------- */
 
 /* ---------- Header ---------- */
 
 .header {
     justify-content: space-around;
+}
+
+.btns > *:where(:not(:first-child)) {
+    margin-left: 1em;
+}
+
+.btn:hover,
+.btn:focus {
+    text-shadow: 0 0 .5px hsl( var(--clr-accent) );
+    border-bottom: 2px solid hsl( var(--clr-accent) );
+    color: hsl( var(--clr-accent) );
 }
 
 /* ---------- Hero ---------- */
@@ -189,6 +198,10 @@ body {
 
 /* ---------- Component.rooms ---------- */
 
+section {
+    padding-top: 2rem;
+}
+
 .room-carousel_img{
     border-radius: 10px;
 }
@@ -197,7 +210,7 @@ body {
 
 
 .story_img {
-    width: 300px;
+    max-width: 300px;
     object-fit: cover;
     border-radius: 10px;
 }
