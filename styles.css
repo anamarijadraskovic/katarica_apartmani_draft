@@ -42,7 +42,9 @@ h2,
 h3,
 h4,
 p,
-a {
+a,
+ul,
+li {
     margin: 0;
 }
 
@@ -71,7 +73,8 @@ a {
     font: inherit;
 }
 
-a {
+a,
+li {
     text-decoration: none;
 }
 
@@ -171,8 +174,9 @@ a {
     justify-content: space-around;
 }
 
-.btns > *:where(:not(:first-child)) {
-    margin-left: 1em;
+.primary-navigation {
+    list-style: none;
+
 }
 
 .btn:hover,
