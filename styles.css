@@ -56,6 +56,8 @@ body {
     background-color: hsl(var(--clr-dark));
     line-height: 1.5;
     min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content 1fr;
 }
 
 /* make images easier to work with */
@@ -170,17 +172,20 @@ li {
 
 /* ---------- Header ---------- */
 
-.header {
+.primary-header {
     justify-content: space-around;
 }
 
 .primary-navigation {
     list-style: none;
-
 }
 
-.btn:hover,
-.btn:focus {
+.primary-navigation  {
+    padding: 5px 0;
+}
+
+.primary-navigation > *:hover,
+.primary-navigation > *:focus {
     text-shadow: 0 0 .5px hsl( var(--clr-accent) );
     border-bottom: 2px solid hsl( var(--clr-accent) );
     color: hsl( var(--clr-accent) );
@@ -189,15 +194,24 @@ li {
 /* ---------- Hero ---------- */
 
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     background-image: url("./images/activities/plitvice_walk.jpg");
     background-size: cover;
 }
 
 .title-container {
-    height: 100vh;
+    min-height: 100vh;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.title-container-subtitle{
+    text-shadow: 0 0 .5px hsl( var(--clr-accent) );
+}
+
+.hero-title {
+    text-align: center;
 }
 
 /* ---------- Component.rooms ---------- */
