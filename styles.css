@@ -22,6 +22,7 @@
     --ff-serif: "Bellefair", serif;
     --ff-sans-cond: "Barlow Condensed", sans-serif;
     --ff-sans-normal: "Barlow", sans-serif;
+    --ff-cav-cur: 'Caveat', cursive, 'Blinker', sans-serif;
 }
 
 /* ---------------------- */
@@ -155,7 +156,8 @@ section {
 
 .ff-serif { font-family: var(--ff-serif); } 
 .ff-sans-cond { font-family: var(--ff-sans-cond); } 
-.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+.ff-sans-normal { font-family: var(--ff-sans-normal); }
+.ff-cav-cur { font-family: var(--ff-cav-cur)}
 
 .letter-spacing-1 { letter-spacing: 4.75px; } 
 .letter-spacing-2 { letter-spacing: 2.7px; } 
@@ -312,6 +314,6 @@ footer {
     text-align: center;
 }
 
-.footer-icons > li {
-    list-style: none;
+.footer-icons > a {
+    padding: 1em 2em;
 }
