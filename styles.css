@@ -44,7 +44,8 @@ h4,
 p,
 a,
 ul,
-li {
+li,
+img {
     margin: 0;
 }
 
@@ -111,7 +112,14 @@ li {
 .container {
     padding-inline: 2em;
     margin-inline: auto;
-    max-width: 80rem;
+    max-width: 70rem;
+}
+
+section:not(:first-child) {
+    padding-top: 2rem;
+}
+section:not(:last-child) {
+    padding-bottom: 2rem;
 }
 
 /* This is for accesability for screen readers */
@@ -125,6 +133,12 @@ li {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
+}
+
+/* Za punu širinu backgrounda(full vw a ne širina containera)*/
+.full-bleed {
+    box-shadow: 0 0 0 100vmax  hsl( var(--clr-light) );
+    clip-path: inset(0 -100vmax);
 }
 
 /* colors */
@@ -164,7 +178,6 @@ li {
 .fs-600 {
     line-height: 1.1;
 }
-
 
 /* ------------------- */
 /* Components   */
@@ -216,12 +229,18 @@ li {
 
 /* ---------- Component.rooms ---------- */
 
-section {
-    padding-top: 2rem;
+.rooms-carousel-title {
+    padding: 0.5em 0;
 }
 
-.room-carousel_img{
-    border-radius: 10px;
+.room-carousel_img {
+    border-radius: 5px;
+}
+
+.room-carousel_img:hover,
+.room-carousel_img:focus {
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 }
 
 /* ---------- Component.story ---------- */
