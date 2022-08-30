@@ -10,7 +10,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
             rel="stylesheet">
-        <title>Katarica</title>
+        <!-- Google font for logo -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;400&family=Caveat:wght@600&family=Henny+Penny&family=Inter:wght@400;600;700&family=Josefin+Sans:wght@200;300;500&family=Poppins:wght@300;500&family=Red+Hat+Mono:wght@300;400&display=swap" rel="stylesheet">
+        
+        <title>Katarica accomodation</title>
         <link rel="stylesheet" href="styles.css">
     </head>
 
@@ -19,7 +24,7 @@
         <div class="hero">
             <header class="primary-header flex">
                 <div class="primary-header-logo text-dark letter-spacing-2">
-                    <h2>Katarica</h2>
+                    <h2 class="fs-600">Katarica</h2>
                 </div>
                 <nav>
                     <ul class="primary-navigation flex">
@@ -32,6 +37,7 @@
             <div class="title-container flex">
                 <h1 class="hero-title fs-700 letter-spacing-2 uppercase">Katarica apartmani</h1>
                 <p class="title-container-subtitle">Your peaceful accomodation in the heart of Croatia</p>
+                <a href="#" class="book-btn bg-light text-dark letter-spacing-3">Book now</a>
             </div>
         </div>
 
@@ -105,10 +111,36 @@
             </section>
         </div>
 
-         <!-- FOOTER-->
-         <footer class="container">
-            <h1>Contact us</h1>
-         </footer>
+         <!-- CONTACT-->
+         <section class="contact container flex">
+            <h2>Contact us</h1>
+                <form class="container" action="#" method="get">
+                    <label>
+                        <input type="text" required placeholder="Your Name">
+                    </label>
+                    <label>
+                        <input type="email" required placeholder="Your e-mail">
+                    </label>
+                    <textarea rows="5" placeholder="Contact us">
+                    </textarea>
+                    <button class="send-btn bg-light text-dark letter-spacing-3">Send</button>
+                </form>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="container flex">
+                <div class="primary-header-logo text-light letter-spacing-2">
+                    <h1 class="fs-700">Katarica</h1>
+                    <p>Mountain logo</p>
+                </div>
+                <h4>Find us around the web</h3>
+                <ul class="footer-icons container flex">
+                    <li>Airbnb logo</li>
+                    <li>Facebook logo</li>
+                    <li>Booking logo</li>
+                    <li>Instagram logo</li>
+                </ul>
+            </footer>
 
     </body>
 </html>

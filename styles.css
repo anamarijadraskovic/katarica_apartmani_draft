@@ -112,13 +112,13 @@ li {
 .container {
     padding-inline: 2em;
     margin-inline: auto;
-    max-width: 70rem;
+    max-width: 60rem;
 }
 
 section:not(:first-child) {
     padding-top: 2rem;
 }
-section:not(:last-child) {
+section {
     padding-bottom: 2rem;
 }
 
@@ -187,6 +187,11 @@ section:not(:last-child) {
 
 .primary-header {
     justify-content: space-around;
+    margin-top: 1.7rem;
+}
+
+.primary-header-logo {
+    font-family: 'Caveat', cursive, 'Blinker', sans-serif;
 }
 
 .primary-navigation {
@@ -227,6 +232,24 @@ section:not(:last-child) {
     text-align: center;
 }
 
+.book-btn,
+.send-btn {
+    padding: .5em 1.2em;
+    border-radius: 7px;
+    text-shadow: 0 0 .1px hsl( var(--clr-accent) / 0.8);
+}
+
+.book-btn:hover,
+.book-btn:focus,
+.send-btn:hover,
+.send-btn:focus {
+    color:hsl( var(--clr-light));
+    cursor: pointer;
+    background-color: hsl(var(--clr-dark) / 0.4);
+    border: solid 1px hsl(var(--clr-light));
+    margin-top: -2px; /* so it doesn't move other thing on the page*/
+}
+
 /* ---------- Component.rooms ---------- */
 
 .rooms-carousel-title {
@@ -257,4 +280,38 @@ section:not(:last-child) {
     border-radius: 10px;
 }
 
+/* ---------- Component.contact ---------- */
+
+.contact {
+    flex-direction: column;
+    background-color: hsl( var(--clr-light) / 0.3);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+input,
+textarea {
+    width: 20em;
+    margin-bottom: 1rem;
+    padding: .2em .4em;
+    border: none;
+    border-radius: 6px;
+}
+
+.send-btn {
+    border: none;
+}
+
 /* ---------- Footer ---------- */
+
+footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.footer-icons > li {
+    list-style: none;
+}
