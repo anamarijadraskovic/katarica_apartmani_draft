@@ -209,6 +209,7 @@ section {
     text-shadow: 0 0 .5px hsl( var(--clr-accent) );
     border-bottom: 2px solid hsl( var(--clr-accent) );
     color: hsl( var(--clr-accent) );
+    margin-top: -2px; /* Poništavanje micanja zbog 2px bordera */
 }
 
 /* ---------- Hero ---------- */
@@ -226,7 +227,7 @@ section {
     justify-content: center;
 }
 
-.title-container-subtitle{
+.title-container-subtitle {
     text-shadow: 0 0 .5px hsl( var(--clr-accent) );
 }
 
@@ -254,18 +255,26 @@ section {
 
 /* ---------- Component.rooms ---------- */
 
-.rooms-carousel-title {
-    padding: 0.5em 0;
+.rooms {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./images/rooms.jpg");
+    background-size: cover;
+    height: 300px;
 }
 
-.room-carousel_img {
-    border-radius: 5px;
+.rooms-title {
+    padding: 1em 2em;
+    background-color: hsl(var(--clr-light) / .3);
+    border-radius: 3px;
 }
 
-.room-carousel_img:hover,
-.room-carousel_img:focus {
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+.rooms-title:hover,
+.rooms-title:focus {
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 5px solid var(--clr-accent);
 }
 
 /* ---------- Component.story ---------- */
@@ -273,6 +282,7 @@ section {
 
 .story_img {
     max-width: 300px;
+    max-height: 300px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -289,7 +299,6 @@ section {
     background-color: hsl( var(--clr-light) / 0.3);
     text-align: center;
     padding: 2rem;
-    border-radius: 20px;
 }
 
 input,
@@ -316,4 +325,42 @@ footer {
 
 .footer-icons > a {
     padding: 1em 2em;
+}
+
+/*------------- PAGES --------- */
+
+/* ------ Rooms --------*/
+
+.rooms-page {
+    max-width: 800px;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+    margin: 2rem auto;
+}
+
+.rooms-page-container {
+    font-size: var(--fs-300);
+    font-family: var(--ff-sans-cond);
+    color: hsl(var(--clr-dark));
+}
+
+.rooms-page_img {
+    height: 300px;
+    width: 300px;
+    border-radius: 7px;
+    object-fit: cover;
+    margin-bottom: 0.6rem;
+}
+
+.rooms-page_img:hover,
+.rooms-page_img:focus {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 5px solid var(--clr-accent);
+}
+
+.rooms-page-container:hover,
+.rooms-page-container:focus {
+    color: hsl(var(--clr-dark) / 0.8);
 }
