@@ -189,7 +189,8 @@ section {
 
 .primary-header {
     justify-content: space-around;
-    margin-top: 1.7rem;
+    padding: 1.7rem 0;
+    background-color: hsl(var(--clr-dark) / .1);
 }
 
 .primary-header-logo {
@@ -330,6 +331,10 @@ footer {
 /*------------- PAGES --------- */
 
 /* ------ Rooms --------*/
+.all-rooms {
+    margin-top: 0;
+    padding: 2em 0 1.5em;
+}
 
 .rooms-page {
     max-width: 800px;
@@ -363,4 +368,29 @@ footer {
 .rooms-page-container:hover,
 .rooms-page-container:focus {
     color: hsl(var(--clr-dark) / 0.8);
+}
+
+/* ------------------- SINGLE ROOM ---------------- */
+
+.room-page > img {
+    max-width: 500px;
+}
+.room-page-main-img {
+    margin: 1rem auto 0;
+}
+
+.room-intro {
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.room-images {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+.room-images > img {
+    border-radius: 7px;
+    object-fit: cover;
 }
