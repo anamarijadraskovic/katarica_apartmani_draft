@@ -30,8 +30,12 @@
                         </h2>
                     </a>
                 </div>
+                <button class="mobile-nav-toggle"
+                aria-controls="primary-navigation" aria-expanded="false">
+                    <span class="sr-only">Menu</span>
+                </button>
                 <nav>
-                    <ul class="primary-navigation flex">
+                    <ul class="primary-navigation flex" id="primary-navigation" data-visible="false">
                         <li><a href="../rooms.html" class="btn text-dark letter-spacing-2">Accomodation</a></li>
                         <li><a href="#" class="btn text-dark letter-spacing-2">Activities</a></li>
                         <li><a href="#" class="btn text-dark letter-spacing-2">Contact</a></li>
@@ -53,7 +57,7 @@
             </main>
         </div>
             <footer class="container flex">
-                <div class="primary-header-logo text-light letter-spacing-2">
+                <div class="footer-logo text-light letter-spacing-2">
                     <h1 class="fs-700">Katarica</h1>
                 </div>
                 <h4>Find us around the web</h4>
@@ -75,5 +79,6 @@
                     </a>
                 </div>
             </footer>
+            <script src="../index.js"></script>
     </body>
 </html>
