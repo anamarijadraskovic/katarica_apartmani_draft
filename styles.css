@@ -190,6 +190,7 @@ section {
 
 .primary-header {
     justify-content: space-around;
+    align-items: center;
     padding: 1.7rem 0;
     background-color: hsl(var(--clr-accent) / .1);
 }
@@ -206,8 +207,10 @@ section {
 
     .primary-header-logo {
         position: absolute;
+        padding-top: 1.7rem;
         z-index: 4000;
     }
+
     .primary-header {
         padding: 2rem 0 3rem;
         background-color: hsl(var(--clr-dark) / .1);
@@ -242,10 +245,6 @@ section {
         box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
     }
 
-    .mobile-nav-toggle[aria-expanded="true"] {
-        background-image: url("./images/header/xmark-solid.svg");
-    }
-
     .mobile-nav-toggle {
         display: block;
         position: absolute;
@@ -256,12 +255,23 @@ section {
         background: transparent;
         background-image: url("./images/header/bars-solid.svg");
         background-repeat: no-repeat;
+        background-position: center;
         width: 2rem;
         aspect-ratio: 1;
+    }
+    
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url("./images/header/xmark-solid.svg");
     }
 
     .mobile-nav-toggle:hover {
         cursor: pointer;
+    }
+    /* accessibility */
+    .mobile-nav-toggle:focus-visible {
+        outline: 3px solid hsl(var(--clr-dark));
+        outline-offset: 5px;
+        border-radius: 1px;
     }
 }
 
@@ -280,7 +290,7 @@ section {
 /* ---------- Hero ---------- */
 
 .hero {
-    min-height: 100vh;
+    max-height: 100vh;
     background-image: url("./images/activities/plitvice_walk.jpg");
     background-size: cover;
 }
