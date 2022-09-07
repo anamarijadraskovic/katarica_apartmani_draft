@@ -186,7 +186,7 @@ section {
 /* Components   */
 /* ------------------- */
 
-/* ---------- Header ---------- */
+/* ---------- Header & Navigation ---------- */
 
 .primary-header {
     justify-content: space-around;
@@ -199,11 +199,28 @@ section {
     font-family: 'Caveat', cursive, 'Blinker', sans-serif;
 }
 
+.primary-navigation {
+    list-style: none;
+}
+
+.primary-navigation a {
+    padding: .7rem 0.2rem;
+    margin-inline: .7rem clamp(.5rem, 10vw, 4rem);
+}
+
+.primary-navigation a:hover,
+.primary-navigation a:focus {
+    border-bottom: 2px solid hsl( var(--clr-accent) );
+    text-shadow: 0 0 .5px hsl( var(--clr-accent) );
+    color: hsl( var(--clr-accent) );
+}
+
 .mobile-nav-toggle {
     display: none;
 }
 
-@media (max-width: 40rem) {
+/*-------- Small screens ----------*/
+@media (max-width: 45rem) {
 
     .primary-header-logo {
         position: absolute;
@@ -275,18 +292,6 @@ section {
     }
 }
 
-.primary-navigation {
-    list-style: none;
-}
-
-.primary-navigation > *:hover,
-.primary-navigation > *:focus {
-    text-shadow: 0 0 .5px hsl( var(--clr-accent) );
-    border-bottom: 2px solid hsl( var(--clr-accent) );
-    color: hsl( var(--clr-accent) );
-    margin-bottom: -2px; /* Poništavanje micanja zbog 2px bordera */
-}
-
 /* ---------- Hero ---------- */
 
 .hero {
@@ -325,9 +330,16 @@ section {
     cursor: pointer;
     background-color: hsl(var(--clr-dark) / 0.4);
     border: solid 1px hsl(var(--clr-light));
-    margin-top: -2px; /* so it doesn't move other thing on the page*/
+    margin-top: -2px; /* so it doesn't move other thing on the page */
 }
 
+/* ---------- COMPONENTS ---------- */
+
+@media (max-width: 35rem) {
+    .container {
+        padding-inline: 0;
+    }
+}
 /* ---------- Component.rooms ---------- */
 
 .rooms {
