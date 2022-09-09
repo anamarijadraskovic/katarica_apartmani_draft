@@ -386,6 +386,7 @@ section {
 
 .contact {
     flex-direction: column;
+    justify-content: center;
     background-color: hsl( var(--clr-light) / 0.3);
     text-align: center;
     padding: 2rem;
@@ -393,7 +394,6 @@ section {
 
 input,
 textarea {
-    width: 20em;
     margin-bottom: 1rem;
     padding: .2em .4em;
     border: none;
@@ -401,7 +401,9 @@ textarea {
 }
 
 .send-btn {
+    width: 30%;
     border: none;
+    align-self: center;
 }
 
 /* ---------- Footer ---------- */
