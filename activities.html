@@ -53,25 +53,50 @@
             </header>
         </div>
         <!-- MAIN -->
-        <div>
-            <button aria-selected="true">Hiking</button>
-            <button aria-selected="false">Cycling</button>
-            <button aria-selected="false">Plitvice lakes</button>
-            <button aria-selected="false">Rock climbing</button>
-        </div>
+        <main class="grid">
+            <h1 class="activities-title">Activities to do nearby</h1>
+            <div>
+                <button aria-selected="true">Hiking</button>
+                <button aria-selected="false">Cycling</button>
+                <button aria-selected="false">Plitvice lakes</button>
+                <button aria-selected="false">Rock climbing</button>
+            </div>
 
-        <article class="activities-details">
-            <header>
-                <h2>Hiking</h2>
-            </header>
-            <p>Lika offers numerous destinations and peaks for hiking.
-                We suggest visiting visiting nearby Mrsinj, Kremen and Ozeblin.
-                There are endles possibilities for hiking in Velebit or Gorski kotar nearby.
-                You can see some possibilities on <a href="https://www.hps.hr/karta/index.html?longitude=15.218510627745&latitude=44.9172109365462&object_icon=obilaznica&area=sjeverni_velebit&object_name=Senjsko%20bilo%20%2D%20vrh%20Jadi%C4%8Deva%20plan%20(1416%20m)">
-                Croatian Mountaineering association page</a>
-            </p>
-                <img src="./images/activities/hike_premuziceva.jpg" alt="premuzic trail">
-        </article>
+            <img class="activity-img" src="./images/activities/hike_premuziceva.jpg" alt="premuzic trail">
+            <img class="activity-img hidden" src="./images/activities/cycling_velebit.jpg" alt="premuzic trail">
+            <img class="activity-img hidden" src="./images/activities/hike_premuziceva.jpg" alt="premuzic trail">
+            <img class="activity-img hidden" src="./images/activities/baraceve_spilje.jpg" alt="premuzic trail">
+            <img class="activity-img hidden" src="./images/activities/ranch_jelena.jpg" alt="premuzic trail">
+            <img class="activity-img hidden" src="./images/activities/plitvice_walk.jpg" alt="premuzic trail">
+            <!-- Hiking -->
+            <article class="activities-details container flex">
+                <div class="activities-text">
+                    <header>
+                        <h2>Hiking</h2>
+                    </header>
+                    <p>Lika offers numerous destinations and peaks for hiking.
+                        We suggest visiting visiting nearby Mrsinj, Kremen and Ozeblin.
+                        There are endles possibilities for hiking in Velebit or Gorski kotar nearby.
+                        You can see some possibilities on <a href="https://www.hps.hr/karta/index.html?longitude=15.218510627745&latitude=44.9172109365462&object_icon=obilaznica&area=sjeverni_velebit&object_name=Senjsko%20bilo%20%2D%20vrh%20Jadi%C4%8Deva%20plan%20(1416%20m)">
+                        Croatian Mountaineering association page</a>
+                    </p>
+                </div>
+            </article>
+            <!-- Cycling -->
+            <article class="hidden activities-details container flex">
+                <div class="activities-text">
+                    <header>
+                        <h2>Cycling</h2>
+                    </header>
+                    <p>Lika offers numerous destinations and peaks for hiking.
+                        We suggest visiting visiting nearby Mrsinj, Kremen and Ozeblin.
+                        There are endles possibilities for hiking in Velebit or Gorski kotar nearby.
+                        You can see some possibilities on <a href="https://www.hps.hr/karta/index.html?longitude=15.218510627745&latitude=44.9172109365462&object_icon=obilaznica&area=sjeverni_velebit&object_name=Senjsko%20bilo%20%2D%20vrh%20Jadi%C4%8Deva%20plan%20(1416%20m)">
+                        Croatian Mountaineering association page</a>
+                    </p>
+                </div>
+            </article>
+        </main>
 
         <!-- FOOTER -->
         <footer class="container flex">

@@ -560,3 +560,20 @@ footer {
     border-radius: 7px;
     object-fit: cover;
 }
+
+/* ------------------- ACTIVITY PAGE ---------------- */
+
+.activities-details {
+    border: solid pink 2px;
+}
+
+.activity-img {
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.hidden {
+    display: none;
+}
