@@ -204,7 +204,6 @@ section {
 }
 
 .primary-navigation a {
-    padding: .7rem 0.2rem;
     margin-inline: .7rem clamp(.5rem, 10vw, 4rem);
 }
 
@@ -220,7 +219,7 @@ section {
 }
 
 /*-------- Small screens ----------*/
-@media (max-width: 45rem) {
+@media (max-width: 64.999em) {
 
     .primary-header-logo {
         position: absolute;
@@ -229,7 +228,7 @@ section {
     }
 
     .primary-header {
-        padding: 2rem 0 3rem;
+        padding: 2rem 0 4rem;
         background-color: hsl(var(--clr-dark) / .1);
     }
 
@@ -238,7 +237,7 @@ section {
         flex-direction: column;
         position: fixed;
         z-index: 1000;
-        inset: 0 0 50% 0; /* shorthand for top right bootom & left*/
+        inset: 0 0 33% 0; /* shorthand for top right bootom & left*/
         padding: min(15rem, 15vh) 2rem;
         font-size: var(--fs-500);
         transform: translateX(100%); /* it moves 100% off the viewpot width in x direction*/
@@ -246,7 +245,7 @@ section {
     }
 
     .primary-navigation > li {
-        padding: 1rem 0;
+        padding: 0.8rem 0;
         text-align: center;
     }
 
@@ -292,6 +291,18 @@ section {
     }
 }
 
+@media (min-width: 65em) and (max-width: 90em) {
+    .primary-header {
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.8rem 1rem;
+        }
+    .primary-navigation {
+        margin: 0 auto;
+    }
+
+}
+
 /* ---------- Hero ---------- */
 
 .hero {
@@ -335,7 +346,7 @@ section {
 
 /* ---------- COMPONENTS ---------- */
 
-@media (max-width: 35rem) {
+@media (max-width: 35em) {
     .container {
         padding-inline: 0;
     }
