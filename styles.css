@@ -139,7 +139,7 @@ section {
 
 /* Za punu širinu backgrounda(full vw a ne širina containera)*/
 .full-bleed {
-    box-shadow: 0 0 0 100vmax  hsl( var(--clr-light) );
+    box-shadow: 0 0 0 100vmax hsl(var(--clr-light) / .1);
     clip-path: inset(0 -100vmax);
 }
 
@@ -191,11 +191,14 @@ section {
 .primary-header {
     justify-content: space-around;
     align-items: center;
-    padding: 1.7rem 0;
+    padding: 1.8rem 1rem;
     background-color: hsl(var(--clr-accent) / .1);
 }
 
-.primary-header-logo {
+.primary-header-logo,
+.story-title,
+.story-subtitle,
+.activities-title {
     font-family: 'Caveat', cursive, 'Blinker', sans-serif;
 }
 
@@ -204,7 +207,8 @@ section {
 }
 
 .primary-navigation a {
-    margin-inline: .7rem clamp(.5rem, 10vw, 4rem);
+    margin-inline: .7rem clamp(.5rem, 10vw, 3rem);
+    padding-bottom: .5em;
 }
 
 .primary-navigation a:hover,
@@ -219,7 +223,7 @@ section {
 }
 
 /*-------- Small screens ----------*/
-@media (max-width: 64.999em) {
+@media (max-width: 54.999em) {
 
     .primary-header-logo {
         position: absolute;
@@ -291,16 +295,19 @@ section {
     }
 }
 
-@media (min-width: 65em) and (max-width: 90em) {
+@media (min-width: 55em) and (max-width: 70em) {
     .primary-header {
         justify-content: space-between;
-        align-items: center;
-        padding: 1.8rem 1rem;
+        justify-items: center;
         }
-    .primary-navigation {
-        margin: 0 auto;
+    .primary-navigation a{
+        margin: .7em clamp(.2rem, 20vw, 0.9em);
     }
-
+    .mobile-nav-toggle:focus-visible {
+        outline: 3px solid hsl(var(--clr-dark));
+        outline-offset: 5px;
+        border-radius: 1px;
+    }
 }
 
 /* ---------- Hero ---------- */
@@ -309,6 +316,7 @@ section {
     max-height: 100vh;
     background-image: url("./images/activities/plitvice_walk.jpg");
     background-size: cover;
+    justify-content: center;
 }
 
 .title-container {
@@ -359,14 +367,16 @@ section {
     justify-content: center;
     background-image: url("./images/room_5/room_full-5.jpg");
     background-size: cover;
-    height: 300px;
+    background-position: center;
+    opacity: 0.7;
+    height: 450px;
 }
 
 .rooms-title {
     padding: 1em 2em;
-    background-color: hsl(var(--clr-light) / .3);
+    background-color: hsl(var(--clr-light) / .7);
     border-radius: 3px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+    box-shadow: rgba(255, 248, 248, 0.427) 0px 5px 15px;
 }
 
 .rooms-title:hover,
@@ -375,22 +385,72 @@ section {
     box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
     border: 5px solid var(--clr-accent);
     color: hsl(var(--clr-dark) / 0.9);
-    background-color: hsl(var(--clr-light) / .7)
+    background-color: hsl(var(--clr-light))
 }
 
 /* ---------- Component.story ---------- */
 
+.story {
+    text-align: left;
+    margin: 3em 1em 0em;
+    background-color: hsl(var(--clr-light) / .1);
+}
 
+.story-title {
+    margin-bottom: .6em;
+    padding-top: 1em;
+}
+
+.story-subtitle {
+    margin-bottom: 0.5em;
+}
+
+.story_text {
+    max-width: 80%;
+    padding: 1.7em 0;
+}
 .story_img {
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 350px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 7px;
+    margin: 0 auto;
+}
+
+@media (min-width: 45em){
+    .story {
+        max-width: 600px;
+        margin: 2em auto;
+    }
+
+    .story-text-img {
+        display: flex;
+        padding-bottom: 2em;
+    }
+
+    .story_text {
+        padding: 0;
+        max-width: 10em;
+    }
+
+    .story_img {
+        max-height: 370px;
+        margin: 0 3em 0 0;
+    }
 }
 /* ---------- Component.activites ---------- */
 
+.activities {
+    padding: 0 1em;
+}
+
 .activities-map_img {
     border-radius: 10px;
+}
+
+@media (min-width: 45em) {
+    .activities {
+        padding: 0;
+    }
 }
 
 /* ---------- Component.contact ---------- */
