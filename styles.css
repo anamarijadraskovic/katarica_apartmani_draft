@@ -124,6 +124,10 @@ section {
     padding-bottom: 2rem;
 }
 
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
 /* This is for accesability for screen readers */
 .sr-only {
   position: absolute; 
@@ -563,17 +567,95 @@ footer {
 
 /* ------------------- ACTIVITY PAGE ---------------- */
 
-.activities-details {
-    border: solid pink 2px;
+.hidden {
+    display: none;
 }
 
-.activity-img {
-    max-width: 400px;
-    max-height: 400px;
+.tab-list {
+    --gap: 2rem;
+}
+
+.activities-text > h2 {
+    margin-bottom: 2rem;
+}
+
+.tab-list > * {
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    padding: (2rem, .5rem), 0;
+    border-bottom: .2rem solid hsl( var(--clr-light) /0);
+    color: hsl( var(--clr-light) );
+}
+
+.tab-list > [aria-selected: "true"] {
+    color: hsl( var(--clr-light) / 1);
+    border-bottom: .2rem solid hsl( var(--clr-light) / 1);
+}
+
+.grid-container--activities {
+    grid-template-areas:
+    'title'
+    'image'
+    'tabs'
+    'content';
+    text-align: center;
+    padding-inline: 1rem;
+    place-items: center;
+    padding-bottom: 4rem;
+    --flow-space: 2rem;
+}
+
+.grid-container--activities > .activities-title {
+    grid-area: title;
+    margin-top: 2rem;
+}
+
+.grid-container--activities > .activity-img {
+    grid-area: image;
+    max-width: 80%;
     object-fit: cover;
     border-radius: 7px;
 }
 
-.hidden {
-    display: none;
+.grid-container--activities > .tab-list {
+    grid-area: tabs;
+}
+
+.grid-container--activities > .activities-content {
+    grid-area: content;
+}
+
+@media (min-width: 35rem) {
+    .activities-title {
+        justify-self: start;
+    }
+    .grid-container--activities > .activity-img {
+        max-width: 75%;
+    }
+}
+
+@media (min-width: 50em) {
+    .grid-container {
+        text-align: left;
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
+        column-gap: 2rem;
+    }
+    .tab-list {
+        --gap: 1rem;
+    }
+    .activities-content {
+        padding: 0;
+    }
+    .grid-container--activities {
+        justify-items: start;
+        align-content: start;
+        grid-template-areas:
+        '. title title .'
+        '. image tabs .'
+        '. image content .';
+    }
+    .grid-container--activities > .activity-img {
+        max-width: 90%;
+    }
 }
