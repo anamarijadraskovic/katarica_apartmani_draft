@@ -23,7 +23,8 @@
         <title>Katarica accomodation</title>
         <link rel="stylesheet" href="styles.css">
         <script src="https://kit.fontawesome.com/55c28f6f51.js" crossorigin="anonymous"></script>
-        <script src="./index.js" defer></script>
+        <script src="./navigation.js" defer></script>
+        <script src="./tabs.js" defer></script>
     </head>
 
     <body class="ff-sans-normal">
@@ -55,29 +56,42 @@
         <!-- MAIN -->
         <main class="grid grid-container grid-container--activities flow">
             <h1 class="activities-title letter-spacing-2">Activities to do nearby</h1>
-            <div class="tab-list flex">
+            <picture class="activity-img">
+                <img src="./images/activities/hike_premuziceva.jpg" alt="premuzic trail">
+            </picture>
+            <picture hidden class="activity-img">
+                <img  src="./images/activities/cycling_velebit.jpg" alt="premuzic trail">
+            </picture>
+            <picture hidden class="activity-img">
+                <img src="./images/activities/hike_premuziceva.jpg" alt="premuzic trail">
+            </picture>
+            <picture hidden class="activity-img">
+                <img src="./images/activities/baraceve_spilje.jpg" alt="premuzic trail">
+            </picture>
+            <picture hidden class="activity-img">
+                <img src="./images/activities/ranch_jelena.jpg" alt="premuzic trail">
+            </picture>
+            <picture hidden class="activity-img">
+                <img src="./images/activities/plitvice_walk.jpg" alt="premuzic trail">
+            </picture>
+
+            <div class="tab-list flex" role="tablist" aria-label="activity list">
                 <button aria-selected="true" role="tab" aria-controls="hiking-tab"
-                        class="uppercase ff-sans-cond letter-spacing-2">
+                        class="uppercase ff-sans-cond letter-spacing-2" tabindex="0">
                         Hiking</button>
                 <button aria-selected="false" role="tab" aria-controls="cycling-tab"
-                        class="uppercase ff-sans-cond letter-spacing-2">
+                        class="uppercase ff-sans-cond letter-spacing-2" tabindex="-1">
                         Cycling</button>
                 <button aria-selected="false" role="tab" aria-controls="plitvice-tab"
-                        class="uppercase ff-sans-cond letter-spacing-2">
+                        class="uppercase ff-sans-cond letter-spacing-2" tabindex="-1">
                         Plitvice lakes</button>
                 <button aria-selected="false" role="tab" aria-controls="rock-climbing-tab"
-                        class="uppercase ff-sans-cond letter-spacing-2">
+                        class="uppercase ff-sans-cond letter-spacing-2" tabindex="-1">
                         Rock climbing</button>
             </div>
 
-            <img class="activity-img hidden" src="./images/activities/hike_premuziceva.jpg" alt="premuzic trail">
-            <img class="activity-img hidden" src="./images/activities/cycling_velebit.jpg" alt="premuzic trail">
-            <img class="activity-img " src="./images/activities/hike_premuziceva.jpg" alt="premuzic trail">
-            <img class="activity-img hidden" src="./images/activities/baraceve_spilje.jpg" alt="premuzic trail">
-            <img class="activity-img hidden" src="./images/activities/ranch_jelena.jpg" alt="premuzic trail">
-            <img class="activity-img hidden" src="./images/activities/plitvice_walk.jpg" alt="premuzic trail">
             <!-- Hiking -->
-            <article class="activities-content container flex">
+            <article class="activities-content container flex" id="hiking-tab" tabindex="0" role="tabpanel">
                 <div class="activities-text">
                     <h2 class="ff-cav-cur letter-spacing-2 uppercase fs-700">Hiking</h2>
                     <p>Lika offers numerous destinations and peaks for hiking.
@@ -89,23 +103,34 @@
                 </div>
             </article>
             <!-- Cycling -->
-            <article class="hidden activities-details container flex">
+            <article hidden class="activities-content container flex" id="cycling-tab" tabindex="0" role="tabpanel">
                 <div class="activities-text">
-                    <header>
-                        <h2>Cycling</h2>
-                    </header>
-                    <p>Lika offers numerous destinations and peaks for hiking.
-                        We suggest visiting visiting nearby Mrsinj, Kremen and Ozeblin.
-                        There are endles possibilities for hiking in Velebit or Gorski kotar nearby.
-                        You can see some possibilities on <a href="https://www.hps.hr/karta/index.html?longitude=15.218510627745&latitude=44.9172109365462&object_icon=obilaznica&area=sjeverni_velebit&object_name=Senjsko%20bilo%20%2D%20vrh%20Jadi%C4%8Deva%20plan%20(1416%20m)">
-                        Croatian Mountaineering association page</a>
+                    <h2 class="ff-cav-cur letter-spacing-2 uppercase fs-700">Cycling</h2>
+                    <p>There are amazing roads for experience cyclists! Bikepackers are our common guests
+                        and we love hearing experiences from others.
+                    </p>
+                </div>
+            </article>
+            <!-- Plitvice lakes -->
+            <article hidden class="activities-content container flex" id="plitvice-tab" tabindex="0" role="tabpanel">
+                <div class="activities-text">
+                    <h2 class="ff-cav-cur letter-spacing-2 uppercase fs-700">Plitvice</h2>
+                    <p>Walk on Plitvice
+                    </p>
+                </div>
+            </article>
+            <!-- Rock CLimbing -->
+            <article hidden class="activities-content container flex" id="rock-climbing-tab" tabindex="0" role="tabpanel">
+                <div class="activities-text">
+                    <h2 class="ff-cav-cur letter-spacing-2 uppercase fs-700">Rock climbing</h2>
+                    <p>Rock climbing in Paklenica National Park
                     </p>
                 </div>
             </article>
         </main>
 
         <!-- FOOTER -->
-        <footer class="container flex">
+        <footer class="container flex activities--footer full-bleed">
             <div class="footer-logo text-light letter-spacing-2">
                 <h1 class="fs-700">Katarica</h1>
             </div>
