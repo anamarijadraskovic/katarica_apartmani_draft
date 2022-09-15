@@ -4,9 +4,9 @@
 
 :root {
     /* Colors */
-    --clr-dark: 105 8% 20%;
-    --clr-light: 242 40% 88%;
-    --clr-accent: 206 37% 24%;
+    --clr-dark: 206 37% 24%;
+    --clr-light: 120 5% 91%;
+    --clr-accent: 206 30% 57%;
 
     /* font-sizes */
     --fs-900: 9.375rem;
@@ -583,7 +583,7 @@ footer {
     cursor: pointer;
     border: 0;
     background-color: transparent;
-    padding: (2rem, .8rem), 0;
+    padding: (.8rem, 2rem), 0;
     border-bottom: .2rem solid hsl( var(--clr-light) /0);
     color: hsl( var(--clr-light) );
 }
@@ -631,6 +631,11 @@ footer {
 .grid-container--activities > .activities-content {
     grid-area: content;
 }
+.activities-links {
+    text-decoration: none;
+    color: hsl( var(--clr-light) / .7);
+    border-bottom: solid 1px hsl( var(--clr-light) / .7);
+}
 
 @media (min-width: 35rem) {
     .activities-title {
@@ -646,12 +651,10 @@ footer {
         text-align: left;
         grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
         column-gap: 2rem;
+        overflow-x: hidden;
     }
     .tab-list {
-        --gap: 1rem;
-    }
-    .activities-content {
-        padding: 0;
+        --gap: 2rem;
     }
     .grid-container--activities {
         justify-items: start;
@@ -659,10 +662,17 @@ footer {
         grid-template-areas:
         '. title title .'
         '. image tabs .'
+        '. image content .'
         '. image content .';
+    }
+    .activities-content {
+        padding: 0;
+        margin-left: 0;
+        max-width: 50ch;
     }
     .grid-container--activities > .activity-img {
         max-width: 95%;
+        object-fit: cover;
     }
     .activities--footer {
         margin-top: 2rem;
@@ -670,3 +680,22 @@ footer {
 }
 
 [hidden] {display: none !important;}
+
+/* TABLE OF PRICES */
+
+td {
+    padding: 2rem;
+    border-bottom: 1px solid hsl( var(--clr-light) );
+}
+ th {
+    padding: 1.5rem;
+    text-align: left;
+    border-bottom: 2px solid hsl( var(--clr-light) );
+ }
+
+table {
+    background-color: hsl( var(--clr-light) / .5);
+    margin: 25px 0;
+    min-width: 500px;
+    border-collapse: collapse;
+}
