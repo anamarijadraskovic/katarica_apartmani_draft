@@ -17,7 +17,7 @@
     --fs-400: 1.125rem;
     --fs-300: 1rem;
     --fs-200: 0.875rem;
-    
+
     /* font-families */
     --ff-serif: "Bellefair", serif;
     --ff-sans-cond: "Barlow Condensed", sans-serif;
@@ -198,15 +198,15 @@ section {
     padding: 1.8rem 1rem;
     background-color: hsl(var(--clr-dark) / .1);
 }
-/* .entry-header {
-    background-color: hsl(var(--clr-light) / .3);
-    backdrop-filter: blur(2rem);
-} */
+.entry-header {
+    background-color: hsl(var(--clr-light) / .5);
+}
 
 .primary-header-logo,
 .story-title,
 .story-subtitle,
-.activities-title {
+.activities-title,
+.book_page-title {
     font-family: 'Caveat', cursive, 'Blinker', sans-serif;
 }
 
@@ -228,6 +228,10 @@ section {
 
 .mobile-nav-toggle {
     display: none;
+}
+
+.active {
+    border-bottom: .2rem solid hsl( var(--clr-dark) / .4);
 }
 
 /*-------- Small screens ----------*/
@@ -287,7 +291,7 @@ section {
         width: 2rem;
         aspect-ratio: 1;
     }
-    
+
     .mobile-nav-toggle[aria-expanded="true"] {
         background-image: url("./images/header/xmark-solid.svg");
     }
@@ -379,7 +383,7 @@ section {
     background-image: url("./images/room_5/room_full-5.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 0.7;
+    opacity: 0.9;
     height: 450px;
 }
 
@@ -448,19 +452,58 @@ section {
         margin: 0 3em 0 0;
     }
 }
+
 /* ---------- Component.activites ---------- */
 
 .activities {
-    padding: 0 1em;
+    padding: 2rem 1em;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activities-text {
+    max-width: 50ch;
 }
 
 .activities-map_img {
-    border-radius: 10px;
+    max-width: 400px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin: 0 auto;
 }
 
-@media (min-width: 45em) {
+.read-btn {
+    margin-top: 1rem;
+    padding: .4em 1em;
+    border-radius: 5px;
+    border: none;
+    text-shadow: 0 0 .1px hsl( var(--clr-accent) / 0.8);
+    color: hsl( var(--clr-light) );
+    background-color: hsl( var(--clr-accent) / .4);
+}
+
+.read-btn:hover,
+.read-btn:focus {
+    color:hsl( var(--clr-light));
+    cursor: pointer;
+    background-color: hsl(var(--clr-light) / 0.4);
+    border: solid 1px hsl(var(--clr-light));
+}
+
+@media (min-width: 50em) {
     .activities {
-        padding: 0;
+        margin: 0;
+        margin-top: 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 3rem 0;
+    }
+    .activities-map_img  {
+        max-height: 400px;
+        margin: 0 3em 0 0;
+    }
+    .activities-text {
+        margin-right: 1rem;
     }
 }
 
@@ -488,6 +531,13 @@ textarea {
     align-self: center;
 }
 
+.book_page-title {
+    margin: 1.5rem auto;
+}
+
+.book_page {
+    padding: 2rem;
+}
 /* ---------- Footer ---------- */
 
 footer {
@@ -633,6 +683,8 @@ footer {
 
 .grid-container--activities > .tab-list {
     grid-area: tabs;
+    /* justify-self: start; */
+    align-self: start;
 }
 
 .grid-container--activities > .activities-content {
@@ -676,6 +728,8 @@ footer {
         padding: 0;
         margin-left: 0;
         max-width: 50ch;
+        justify-self: start;
+        align-self: start;
     }
     .grid-container--activities > .activity-img {
         max-width: 95%;
