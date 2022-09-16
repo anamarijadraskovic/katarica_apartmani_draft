@@ -15,6 +15,5 @@ navToggle.addEventListener("click", () => {
 const yearHTML = document.getElementById("year")
 const date = new Date()
 const currentYear = date.getFullYear()
-console.log(currentYear)
 
 yearHTML.innerHTML = currentYear
