@@ -607,16 +607,23 @@ footer {
 
 /* ------------------- SINGLE ROOM ---------------- */
 
+.room-intro {
+    padding: 1rem;
+}
+
+.room-intro > p {
+    max-width: 50ch;
+    padding-right: 1rem;
+}
+
 .room-page > img {
     max-width: 500px;
 }
 .room-page-main-img {
     margin: 1rem auto 0;
-}
-
-.room-intro {
-    flex-direction: column;
-    padding: 1rem;
+    max-height: 300px;
+    object-fit: cover;
+    background-position: center center;
 }
 
 .room-images {
@@ -625,9 +632,36 @@ footer {
     margin: 2rem auto;
 }
 
-.room-images > img {
+.room-images > *img {
     border-radius: 7px;
     object-fit: cover;
+    padding: 1rem 0;
+}
+
+@media (min-width: 45rem){
+    .room-intro {
+        margin: 3rem auto;
+        grid-template-areas:
+        '. image title .'
+        '. image content .'
+        '. image content .';
+    }
+    .room-page-main-img {
+        max-width: 400px;
+        grid-area: image;
+        border-radius: 7px;
+        margin-right: 1rem;
+    }
+    .room-intro > h1 {
+        grid-area: title;
+    }
+    .room-intro > p {
+        grid-area: content;
+    }
+    .room-images > img {
+        display: inline;
+        border-radius: 8px;
+    }
 }
 
 /* ------------------- ACTIVITY PAGE ---------------- */
