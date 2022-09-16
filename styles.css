@@ -272,8 +272,8 @@ section {
 
     .primary-navigation[data-visible="true"] {
         transform: translateX(0);
-        background: hsl( var(--clr-light) /0.1);
-        backdrop-filter: blur(2rem);
+        background: hsl( var(--clr-light) /0.3);
+        backdrop-filter: blur(3rem);
         box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
     }
 
@@ -815,18 +815,23 @@ footer {
 
 /* TABLE OF PRICES */
 
+.prices-container {
+    margin-top: 2rem;
+}
+
 td {
     padding: 2rem;
-    border-bottom: 1px solid hsl( var(--clr-light) );
+    font-size: 1.5rem;
 }
+
  th {
+    font-size: var(--fs-500);
     padding: 1.5rem;
     text-align: left;
-    border-bottom: 2px solid hsl( var(--clr-light) );
  }
 
 table {
-    background-color: hsl( var(--clr-light) / .5);
+    background-color: hsl( var(--clr-light) / 0.1);
     margin: 25px 0;
     min-width: 500px;
     border-collapse: collapse;
