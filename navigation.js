@@ -9,3 +9,12 @@ navToggle.addEventListener("click", () => {
     } else {nav.setAttribute("data-visible", false)
     navToggle.setAttribute("aria-expanded", false)}
 })
+
+// Copyright Year
+
+const yearHTML = document.getElementById("year")
+const date = new Date()
+const currentYear = date.getFullYear()
+console.log(currentYear)
+
+yearHTML.innerHTML = currentYear
