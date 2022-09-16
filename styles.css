@@ -362,7 +362,7 @@ section {
 .send-btn:focus {
     color:hsl( var(--clr-light));
     cursor: pointer;
-    background-color: hsl(var(--clr-dark) / 0.4);
+    background-color: hsl(var(--clr-dark) );
     border: solid 1px hsl(var(--clr-light));
     margin-top: -2px; /* so it doesn't move other thing on the page */
 }
@@ -702,6 +702,12 @@ footer {
     text-decoration: none;
     color: hsl( var(--clr-light) / .7);
     border-bottom: solid 1px hsl( var(--clr-light) / .7);
+}
+
+.rooms_activities-links {
+    text-decoration: none;
+    color: hsl( var(--clr-dark) / .8);
+    border-bottom: solid 1px hsl( var(--clr-dark) / .8);
 }
 
 @media (min-width: 35rem) {
