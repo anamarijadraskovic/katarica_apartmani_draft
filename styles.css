@@ -9,7 +9,7 @@
     --clr-accent: 206 30% 57%;
 
     /* font-sizes */
-    --fs-900: 9.375rem;
+    --fs-900: clamp(.7rem, 5vw + 1rem, 4rem); /* This size is just for hero title*/
     --fs-800: 6.25rem;
     --fs-700: 3.5rem;
     --fs-600: 2rem;
@@ -60,7 +60,6 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-rows: min-content 1fr;
-    overflow-x: hidden;
 }
 
 /* make images easier to work with */
@@ -120,6 +119,7 @@ li {
 section:not(:first-child) {
     padding-top: 2rem;
 }
+
 section {
     padding-bottom: 2rem;
 }
@@ -141,7 +141,7 @@ section {
   border: 0;
 }
 
-/* Za punu širinu backgrounda(full vw a ne širina containera)*/
+/* Za punu širinu backgrounda (full vw a ne širina containera)*/
 .full-bleed {
     box-shadow: 0 0 0 100vmax hsl(var(--clr-light) / .1);
     clip-path: inset(0 -100vmax);
@@ -198,7 +198,8 @@ section {
     padding: 1.8rem 1rem;
     background-color: hsl(var(--clr-dark) / .1);
 }
-.entry-header {
+
+.entry-header { /* different color just for the first page */
     background-color: hsl(var(--clr-light) / .5);
 }
 
@@ -281,7 +282,7 @@ section {
         display: block;
         position: absolute;
         z-index: 2000;
-        right: 2rem;
+        right: 1.7rem;
         top: 2rem;
         border: 0;
         background: transparent;
@@ -308,13 +309,16 @@ section {
 }
 
 @media (min-width: 55em) and (max-width: 70em) {
+
     .primary-header {
         justify-content: space-between;
         justify-items: center;
         }
+
     .primary-navigation a{
         margin: .7em clamp(.2rem, 20vw, 0.9em);
     }
+
     .mobile-nav-toggle:focus-visible {
         outline: 3px solid hsl(var(--clr-dark));
         outline-offset: 5px;
@@ -326,9 +330,10 @@ section {
 
 .hero {
     max-height: 100vh;
+    max-width: 100vw;
     background-image: url("./images/activities/plitvice_waterfall1.jpg");
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-position: center center;
 }
 
@@ -337,16 +342,22 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* backdrop-filter: blur(.07rem); */
-}
-
-.title-container-subtitle {
-    text-shadow: 0 0 .5px hsl( var(--clr-dark) );
+    margin: 0;
 }
 
 .hero-title {
+    font-size: var(--fs-900);
     text-align: center;
+    padding: 0 1rem;
     text-shadow: 0 0 .8px hsl( var(--clr-dark) );
+    max-width: 100vw;
+}
+
+.title-container-subtitle {
+    font-size: clamp(0.5rem, 5vw, 1.4rem);
+    text-shadow: 0 0 .5px hsl( var(--clr-dark) );
+    text-align: center;
+    padding: 0 1rem;
 }
 
 .book-btn,
@@ -364,7 +375,7 @@ section {
     cursor: pointer;
     background-color: hsl(var(--clr-dark) );
     border: solid 1px hsl(var(--clr-light));
-    margin-top: -2px; /* so it doesn't move other thing on the page */
+    margin-top: -2px; /* so it doesn't move other things on the page */
 }
 
 /* ---------- COMPONENTS ---------- */
