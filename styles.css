@@ -490,14 +490,13 @@ section {
 /* ---------- Component.story ---------- */
 
 .story {
+    margin: 0;
     text-align: left;
-    margin: 3em 1em 0em;
     background-color: hsl(var(--clr-light) / .1);
 }
 
 .story-title {
-    margin-bottom: .6em;
-    padding-top: 1em;
+    padding: 1rem 0 2rem;
 }
 
 .story-subtitle {
@@ -505,14 +504,14 @@ section {
 }
 
 .story_text {
-    max-width: 80%;
-    padding: 1.7em 0;
+    max-width: 50ch;
+    padding: 1.7em 0.2rem;
 }
+
 .story_img {
-    max-width: 350px;
+    max-width: clamp(200px 5vw 350px);
     object-fit: cover;
-    border-radius: 7px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 @media (min-width: 45em){
@@ -528,12 +527,14 @@ section {
 
     .story_text {
         padding: 0;
-        max-width: 10em;
+        max-width: 30%;
+        padding-left: 1rem;
     }
 
     .story_img {
         max-height: 370px;
-        margin: 0 3em 0 0;
+        max-width: 70%;
+        border-radius: 7px;
     }
 }
 
