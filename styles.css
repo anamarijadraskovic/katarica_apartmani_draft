@@ -254,7 +254,7 @@ section {
         flex-direction: column;
         position: fixed;
         z-index: 1000;
-        inset: 0 0 30% 0; /* shorthand for top right bootom & left*/
+        inset: 0 0 20% 0; /* shorthand for top right bottom & left*/
         padding: min(15rem, 15vh) 2rem;
         font-size: var(--fs-500);
         transform: translateX(100%); /* it moves 100% off the viewpot width in x direction*/
@@ -443,7 +443,7 @@ section {
 }
 
 .activities-text {
-    padding: 0 .4rem;
+    padding: 0 .7rem;
     max-width: 50ch;
 }
 
@@ -466,7 +466,7 @@ section {
 .read-btn:hover,
 .read-btn:focus {
     cursor: pointer;
-    color:hsl( var(--clr-light));
+    color: hsl( var(--clr-light));
     background-color: hsl(var(--clr-light) / 0.4);
     border: solid 1px hsl(var(--clr-light));
 }
@@ -505,7 +505,7 @@ section {
 
 .story_text {
     max-width: 50ch;
-    padding: 1.7em 0.4rem;
+    padding: 1.7em 0.7rem;
 }
 
 .story_img {
@@ -545,7 +545,7 @@ section {
     justify-content: center;
     align-self: center;
     text-align: left;
-    padding: 2rem 0.4rem;
+    padding: 2rem 0.7rem;
     max-width: 49ch;
     margin: 0 0 2rem;
 }
@@ -693,16 +693,28 @@ footer {
 
 /* ------------------- ACTIVITY PAGE ---------------- */
 
+.activities-title {
+    text-align: left;
+    padding-inline: .7rem;
+}
+
 .activities--footer {
     background-color: hsl( var(--clr-light) / 0.1);
 }
 
 .tab-list {
-    --gap: 2rem;
+    --gap: 1.5rem;
+    padding-inline: .7rem;
+    flex-wrap: wrap;
+}
+
+.activities-content {
+    text-align: left;
 }
 
 .activities-text > h2 {
-    margin-bottom: 2rem;
+    font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+    padding: 0 1rem 2rem 0;
 }
 
 .tab-list > * {
@@ -710,17 +722,16 @@ footer {
     border: 0;
     background-color: transparent;
     padding: (.8rem, 2rem), 0;
-    border-bottom: .2rem solid hsl( var(--clr-light) /0);
+    border-bottom: .2rem solid hsl( var(--clr-light) /0); /* This is for stopping the movement of tab when hovering */
     color: hsl( var(--clr-light) );
 }
 
 .tab-list > *:hover,
 .tab-list > *:focus {
-    border-bottom: .2rem solid hsl( var(--clr-light) / 1);
+    border-bottom: .2rem solid hsl( var(--clr-light) );
 }
 
 .tab-list > [aria-selected= "true"] {
-    color: hsl( var(--clr-light) / 1);
     border-bottom: .2rem solid hsl( var(--clr-light) / .5);
 }
 
@@ -731,11 +742,9 @@ footer {
     'tabs'
     'content';
     text-align: center;
-    padding-inline: 1rem;
     place-items: center;
     padding-bottom: 4rem;
     --flow-space: 2rem;
-    overflow-y: hidden;
 }
 
 .grid-container--activities > .activities-title {
@@ -752,13 +761,13 @@ footer {
 
 .grid-container--activities > .tab-list {
     grid-area: tabs;
-    /* justify-self: start; */
     align-self: start;
 }
 
 .grid-container--activities > .activities-content {
     grid-area: content;
 }
+
 .activities-links {
     text-decoration: none;
     color: hsl( var(--clr-light) / .7);
@@ -772,6 +781,11 @@ footer {
 }
 
 @media (min-width: 35rem) {
+    .tab-list {
+        flex-wrap: nowrap;
+        letter-spacing: 2rem;
+        --gap: 1rem;
+    }
     .activities-title {
         justify-self: start;
     }
@@ -782,13 +796,16 @@ footer {
 
 @media (min-width: 55em) {
     .grid-container {
+        max-width: 100%;
         text-align: left;
         grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
         column-gap: 2rem;
         overflow-x: hidden;
     }
     .tab-list {
-        --gap: 2rem;
+        margin-right: 1rem;
+        letter-spacing: 2.35rem;
+        --gap: 1.5rem;
     }
     .grid-container--activities {
         justify-items: start;
