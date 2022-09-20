@@ -878,7 +878,7 @@ th {
 }
 
 .book_page-title {
-    font-size: clamp(2.8rem, 5vw + 1rem, 4rem);
+    font-size: clamp(2.8rem, 5vw + 1rem, 3.5rem);
     margin: 1.5rem auto;
     padding-bottom: (0.5rem 1.5rem);
 }
