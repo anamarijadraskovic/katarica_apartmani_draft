@@ -496,7 +496,7 @@ section {
 }
 
 .story-title {
-    padding: 1rem 0 2rem;
+    padding: 1rem 0.7rem 2rem;
 }
 
 .story-subtitle {
@@ -519,18 +519,18 @@ section {
         max-width: 600px;
         margin: 2em auto;
     }
-
+    .story-title {
+        padding: 1rem 0 2rem;
+    }
     .story-text-img {
         display: flex;
         padding-bottom: 2em;
     }
-
     .story_text {
         padding: 0;
         max-width: 30%;
         padding-left: 1rem;
     }
-
     .story_img {
         max-height: 370px;
         max-width: 70%;
@@ -832,72 +832,79 @@ footer {
     }
 }
 
-[hidden] {display: none !important;}
-
 /* TABLE OF PRICES */
 
 .prices-container {
-    margin-top: 2rem;
+    margin: 2rem auto;
 }
 
 td {
-    padding: 2rem;
-    font-size: 1.5rem;
+    padding: .7rem;
+    font-size: var(--fs-400)
 }
 
- th {
+th {
+    font-family: 'Caveat', cursive, 'Blinker', sans-serif;
     font-size: var(--fs-500);
-    padding: 1.5rem;
+    padding: 0 1rem 0 .7rem;
     text-align: left;
- }
+}
 
-table {
+.prices-container > table {
+    margin: 0;
     background-color: hsl( var(--clr-light) / 0.1);
-    margin: 25px 0;
-    min-width: 500px;
+    max-width: 500px;
     border-collapse: collapse;
 }
 
-    /* CONTACT / BOOK PAGE*/
-
-    .book-list {
-        list-style: none;
-        padding: 0;
+@media (min-width:400px) {
+    .prices-container > table {
+        max-width: 500px;
     }
-
-    .book-list > li {
-        padding-bottom: 1rem;
-    }
-
-    .book-list > li:hover,
-    .book-list > li:focus,
-    .book-list > li > a:hover,
-    .book-list > li > a:focus {
-        color: hsl( var(--clr-light) / .7);
-    }
-    .book-list > li > i {
-        width: 50px;
-    }
-
-    input,
-    textarea {
-        margin-bottom: 1rem;
-        padding: .2em .4em;
-        border: none;
-        border-radius: 6px;
-    }
-
-    .send-btn {
-        width: 30%;
-        border: none;
-        align-self: center;
-    }
-
-    .book_page-title {
-        margin: 1.5rem auto;
-        padding-bottom: 1.5rem;
-    }
-
-    .book_page {
+    td {
         padding: 2rem;
     }
+    th {
+        font-size: var(--fs-600);
+        padding: 2rem;
+        padding-bottom: 1rem;
+    }
+}
+
+/* CONTACT / BOOK PAGE*/
+
+.book_page {
+    padding: 2rem;
+}
+
+.book_page-title {
+    font-size: clamp(2.6rem, 5vw + 1rem, 4rem);
+    margin: 1.5rem auto;
+    padding-bottom: 1.5rem;
+}
+
+.book_page > p {
+    font-size: clamp(.5rem, 5vw + 1rem, 1.75rem);
+}
+
+.book-list {
+    list-style: none;
+    padding: 0;
+}
+
+.book-list > li {
+    padding-bottom: 1rem;
+}
+
+.book-list > li:hover,
+.book-list > li:focus,
+.book-list > li > a:hover,
+.book-list > li > a:focus {
+    color: hsl( var(--clr-light) / .7);
+}
+
+.book-list > li > i {
+    width: 50px;
+}
+
+[hidden] {display: none !important;}
