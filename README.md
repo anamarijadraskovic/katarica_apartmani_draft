@@ -1,6 +1,7 @@
 # Katarica accommodation (draft)
 A web page for accommodation in active development.
 Page is written in pure JavaScript, HTML, and CSS.
+You can see it [here](https://katarica-apartmani-draft.web.app/).
 
 This is a draft for layout purposes, the final page will be written in React.
 
@@ -26,6 +27,7 @@ This is a draft for layout purposes, the final page will be written in React.
 - CSS general reset
 - box-sizing
 - @media
+- clamp()
 ---
 ### HTML and accessibility
 - aria-label
