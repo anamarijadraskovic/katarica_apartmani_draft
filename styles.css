@@ -207,7 +207,8 @@ section {
 .story-title,
 .story-subtitle,
 .activities-title,
-.book_page-title {
+.book_page-title,
+.rooms-title {
     font-family: 'Caveat', cursive, 'Blinker', sans-serif;
 }
 
@@ -408,6 +409,7 @@ section {
 
 .rooms-title {
     padding: clamp(.7rem, 5vw, 2rem) clamp(1rem, 5vw, 4rem);
+    font-size: clamp(.7rem, 5vw + 1rem, 3rem);
     background-color: hsl(var(--clr-light) / .7);
     border-radius: 3px;
     box-shadow: rgba(255, 248, 248, 0.427) 0px 5px 15px;
@@ -425,7 +427,7 @@ section {
 /* Adjusting titles for extra small screens */
 @media (max-width: 300px) {
     .rooms-title {
-        font-size: 1.5rem;
+        font-size: 2rem;
         letter-spacing: 2.8px;
     }
     .hero-title {
