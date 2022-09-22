@@ -2,7 +2,7 @@
 A web page for accommodation in active development.
 Page is written in pure JavaScript, HTML, and CSS.
 
-You can see it [here](https://katarica-apartmani-draft.web.app/).
+You can see it [here](https://katarica-apartmani.web.app/).
 
 This is a draft for layout purposes, the final page will be written in React.
 
