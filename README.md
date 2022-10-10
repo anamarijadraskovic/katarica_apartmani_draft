@@ -12,26 +12,26 @@ This is a draft for layout purposes, the final page will be written in React.
 - JavaScript (ES6)
 - Git
 - GitHub
----
+
 ### JavaScript inbuilt methods used in this project are:
-- addEventListener()
-- document.querySelector()
-- forEach()
-- setAttribute()
-- getAttribute()
----
+- `.addEventListener()`
+- `.querySelector()`
+- `.setAttribute()`
+- `.getAttribute()`
+- `Array.forEach()`
+
 ### Some of the CSS concepts used:
 - flexbox
 - grid
 - utility classes
-- custom properties
 - CSS general reset
-- box-sizing
-- @media
-- clamp()
----
+- custom properties
+- `box-sizing`
+- `@media`
+- `clamp()`
+
 ### HTML and accessibility
-- aria-label
-- aria-controls
-- alt
-- aria-expanded
+- `aria-label`
+- `aria-controls`
+- `alt`
+- `aria-expanded`
